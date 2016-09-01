@@ -1,4 +1,4 @@
-//Program to use sleep method and print
+//Program to use sleep method and print a pattern and also use join and priority
 class Th1 implements Runnable{
 	public void run(){
 		for(int i=65;i<76;i++)
@@ -28,7 +28,21 @@ public class MultiThread3 {
 		t1.setPriority(7);
 		
 		t2.start();
+		try{
+			t2.sleep(1500);	
+		}catch(Exception e){
+			
+		}
+		try{
+			t1.sleep(1500);	
+		}catch(InterruptedException e){
+			
+		}
+		
 		t1.start();
+		//t1.sleep(3000);
+		
+		
 		
 		try{
 			t1.join();
